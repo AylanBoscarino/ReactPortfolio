@@ -4,6 +4,7 @@ import 'bulma';
 
 import { fetchComments } from '../../actions/comments';
 import Comment from '../comment/Comment';
+import CommentWriter from '../comment-writer/CommentWriter'
 
 export class CommentList extends Component {
     componentDidMount = () => {
@@ -12,22 +13,21 @@ export class CommentList extends Component {
 
     render() {
         const comments = this.props.comments.comments.map(comment => (
-            <Comment key={comment.id} comment={comment} />
+            <Comment key={comment._id} comment={comment} />
         ));
         return (
             <div>
                 {comments}
+                <br/>
+                <CommentWriter />
             </div>
         )
     }
 }
 
-const mapStateToProps = state => {
-  console.log({state})
-    return {
-        comments: state.comments
-    };
-};
+const mapStateToProps = state => ({
+    comments: state.comments
+});
 
 export default connect(
     mapStateToProps,

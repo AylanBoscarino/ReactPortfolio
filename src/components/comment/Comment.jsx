@@ -24,9 +24,7 @@ export default function Comment(props) {
                         <strong>{comment.nomeAutor}</strong> {' '}
                         <small>{dataComentario}</small>
                         <br />
-                        <p>
                           {comment.corpo}
-                        </p>
                     </p>
                 </div>
                 {/* <nav className="level is-mobile">

@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 // import logo from './logo.svg';
-import { TelaCadastro } from './components/tela-cadastro/TelaCadastro';
 import './App.css';
 import Home from './components/home/Home';
 import Navbar from './components/navbar/Navbar';
 import About from './components/about/About';
-import Services from './components/services/Services'
-import Portfolio from './components/portfolio/Portfolio'
-import CommentList from './components/comment-list/CommentList'
+import Services from './components/services/Services';
+import Portfolio from './components/portfolio/Portfolio';
+import CommentList from './components/comment-list/CommentList';
+import TelaCadastro from './components/tela-cadastro/TelaCadastro';
 
 class App extends Component {
     render() {
@@ -22,13 +22,15 @@ class App extends Component {
                     <Switch>
                         <Route path="/" exact component={Home} />
                         <Route path="/about" exact component={About} />
-                        <Route path="/signup" exact component={TelaCadastro} />
+                        {/* <Route path="/signup" exact component={TelaCadastro} /> */}
                         <Route path="/services" exact component={Services} />
                         <Route path="/portfolio" exact component={Portfolio} />
                     </Switch>
                 </div>
                 <footer className="footer">
-                <CommentList />
+                    <CommentList />
+                    <br />
+                    <TelaCadastro />
                 </footer>
             </div>
         );

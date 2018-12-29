@@ -1,95 +1,149 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import './styles.css';
 
-export class TelaCadastro extends Component {
-    static propTypes = {
-        prop: PropTypes
-    };
+import { validarInputs } from '../../service/formValidation';
+
+export default class TelaCadastro extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            email: '',
+            name: '',
+            password: '',
+            passwordConfirmation: ''
+        };
+
+        this.onEmailChange = this.onEmailChange.bind(this);
+        this.onNameChange = this.onNameChange.bind(this);
+        this.onPasswordChange = this.onPasswordChange.bind(this);
+        this.onConfirmationChange = this.onConfirmationChange.bind(this);
+        this.onSubmitHandle = this.onSubmitHandle.bind(this);
+    }
+    onEmailChange(e) {
+        this.setState({
+            email: e.target.value
+        });
+    }
+
+    onNameChange(e) {
+        this.setState({
+            name: e.target.value
+        });
+    }
+
+    onPasswordChange(e) {
+        this.setState({
+            password: e.target.value
+        });
+    }
+
+    onConfirmationChange(e) {
+        this.setState({
+            passwordConfirmation: e.target.value
+        });
+    }
+    onSubmitHandle(e) {
+        e.preventDefault();
+        const resultado = validarInputs(
+            this.state.name,
+            this.state.email,
+            this.state.password,
+            this.state.passwordConfirmation
+        )
+        if (!resultado.valido) {
+            return alert(resultado.mensagem);
+        } else {
+            return alert('vai disparar uma action')
+        }
+    }
 
     render() {
         return (
-            <section className="hero is-fullheight is-fullheight-with-navbar">
-                <div className="hero-body">
-                    <div className="container">
-                        <div className="section">
-                            <div className="heading">
-                                <h1 className="title is-3">Bulma Material Design Form Elements</h1>
-                            </div>
-                            <span className="subtitle">Based on <a href="/jonnitto/pen/OVmvPB">the work by</a> Jon Uhlmann</span>
-                            <hr />
-                            <div className="columns">
-                                <div className="column is-three-quarters">
-                                    <div className="control has-icon has-icon-right">
-                                        <input className="input" type="text" required />
-                                        <i className="fa material-icons">face</i>
-                                        <label className="label">Name</label>
-                                        <i className="bar"></i>
-                                    </div>
-                                    <div className="control">
-                                        <input className="input is-success" type="text" value="bulma" required />
-                                        <label className="label">Username</label>
-                                        <i className="bar"></i>
-                                    </div>
-                                    <p className="con trol has-icon has-icon-right has-error">
-                                        <input className="input" type="text" value="hello@" required />
-                                        <i className="fa material-icons">warning</i>
-                                        <label className="label">Email</label>
-                                        <i className="bar"></i>
-                                        <span className="help is-danger">This email is invalid</span>
-                                    </p>
-
-                                    <p className="control">
-                                        <select>
-                                            <option>Select dropdown</option>
-                                            <option>With options</option>
-                                        </select>
-                                        <label className="label">Subject</label>
-                                        <i className="bar"></i>
-                                    </p>
-                                    <p className="control">
-                                        <textarea className="textarea" required></textarea>
-                                        <label className="label">Message</label>
-                                        <i className="bar"></i>
-                                    </p>
-                                    <p className="checkbox-control">
-                                        <label>
-                                            <input type="checkbox" />
-                                            <i className="helper"></i>
-                                            Remember me
-                                        </label>
-                                    </p>
-                                    <p className="radio-control">
-                                        <label>
-                                            <input type="radio" name="question" />
-                                            <i className="helper"></i>
-                                            Yes
-                                        </label>
-                                        <label>
-                                            <input type="radio" name="question" />
-                                            <i className="helper"></i>
-                                            No
-                                        </label>
-                                    </p>
-                                    <p className="control">
-                                        <button className="button is-primary">Submit</button>
-                                        <button className="button is-link">Cancel</button>
-                                    </p>
+            <section className="is-primary is-fullheight columns">
+                <div className="container column is-two-thirds">
+                    <div className="columns is-5-tablet is-4-desktop is-3-widescreen">
+                        <div className="column">
+                            <form className="box" onSubmit={this.onSubmitHandle}>
+                                <div className="field has-text-centered">
+                                    <h3 className="title">Sign Up</h3>
+                                    <h3 className="subtitle">
+                                        Join us and leave a comment
+                                    </h3>
                                 </div>
-                                <div className="column">
-                                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                                    {/* <!-- ad --> */}
-                                    <ins className="adsbygoogle"
-                                        style={{ display: "block" }}
-                                        data-ad-client="ca-pub-7616772085785107"
-                                        data-ad-slot="4486838427"
-                                        data-ad-format="auto"></ins>
-                                    <script>
-                                        (adsbygoogle = window.adsbygoogle || []).push({});
-                                    </script>
+                                <div className="field">
+                                    <label className="label">Email</label>
+                                    <div className="control has-icons-left">
+                                        <input
+                                            type="email"
+                                            className="input"
+                                            placeholder="an email address"
+                                            value={this.state.email}
+                                            onChange={this.onEmailChange}
+                                        />
+                                        <span className="icon is-small is-left">
+                                            <i className="fa fa-envelope" />
+                                        </span>
+                                    </div>
                                 </div>
-                            </div>
+                                <div className="field">
+                                    <label className="label">Name</label>
+                                    <div className="control has-icons-left">
+                                        <input
+                                            type="name"
+                                            className="input"
+                                            placeholder="your name"
+                                            value={this.state.name}
+                                            onChange={this.onNameChange}
+                                        />
+                                        <span className="icon is-small is-left">
+                                            <i className="fa fa-envelope" />
+                                        </span>
+                                    </div>
+                                </div>
+                                <div className="field">
+                                    <label className="label">Password</label>
+                                    <div className="control has-icons-left">
+                                        <input
+                                            type="password"
+                                            className="input"
+                                            placeholder="*********"
+                                            required
+                                            value={this.state.password}
+                                            onChange={this.onPasswordChange}
+                                        />
+                                        <span className="icon is-small is-left">
+                                            <i className="fa fa-lock" />
+                                        </span>
+                                    </div>
+                                </div>
+                                <div className="field">
+                                    <label className="label">
+                                        Repeat Password
+                                    </label>
+                                    <div className="control has-icons-left">
+                                        <input
+                                            type="password"
+                                            className="input"
+                                            placeholder="*********"
+                                            required
+                                            value={
+                                                this.state.passwordConfirmation
+                                            }
+                                            onChange={this.onConfirmationChange}
+                                        />
+                                        <span className="icon is-small is-left">
+                                            <i className="fa fa-lock" />
+                                        </span>
+                                    </div>
+                                </div>
+                                <div className="field">
+                                    <button
+                                        className="button is-success"
+                                        >
+                                        sign up
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -97,12 +151,3 @@ export class TelaCadastro extends Component {
         );
     }
 }
-
-const mapStateToProps = state => ({});
-
-const mapDispatchToProps = {};
-
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(TelaCadastro);
