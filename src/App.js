@@ -9,7 +9,7 @@ import Navbar from './components/navbar/Navbar';
 import About from './components/about/About';
 import Services from './components/services/Services'
 import Portfolio from './components/portfolio/Portfolio'
-import Contact from './components/contact/Contact'
+import CommentList from './components/comment-list/CommentList'
 
 class App extends Component {
     render() {
@@ -25,9 +25,11 @@ class App extends Component {
                         <Route path="/signup" exact component={TelaCadastro} />
                         <Route path="/services" exact component={Services} />
                         <Route path="/portfolio" exact component={Portfolio} />
-                        <Route path="/contact" exact component={Contact} />
                     </Switch>
                 </div>
+                <footer className="footer">
+                <CommentList />
+                </footer>
             </div>
         );
     }

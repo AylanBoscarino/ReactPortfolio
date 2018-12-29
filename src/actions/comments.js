@@ -1,0 +1,11 @@
+import {FETCH_COMMENTS} from './types'
+
+export const fetchComments = () => dispatch => {
+    return fetch('https://morning-bayou-52363.herokuapp.com/api/comentarios')
+        .then(response => response.json())
+        .then(comments => dispatch({
+            type: FETCH_COMMENTS,
+            payload: comments
+        }))
+        .catch(err => console.log(err))
+}

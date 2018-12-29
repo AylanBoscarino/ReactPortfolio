@@ -66,12 +66,7 @@ export default class Navbar extends Component {
                             </span>
                             <span>Portfolio</span>
                         </Link>
-                        <Link className="navbar-item" to="/contact">
-                            <span className="icon">
-                                <i className="fas fa-envelope" />
-                            </span>
-                            <span>Contact</span>
-                        </Link>
+                        
                     </div>
                 </div>
             </nav>

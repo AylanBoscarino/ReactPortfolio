@@ -11,7 +11,7 @@ export default function About() {
                 <div className="container">
                     <p>
                         Web developer with more than <strong>4 years </strong>
-                        of well-rounded experience working with PHP and
+                        of well-rounded experience working mainly with PHP and
                         JavaScript, extensive knowledge of modern Web
                         techniques, architectures and design patterns. My{' '}
                         <strong>dream</strong> is to build something big enough
@@ -54,16 +54,19 @@ export default function About() {
                             <div className="buttons has-addons is-centered">
                                 <a
                                     href="https://github.com/aylanboscarino"
+                                    target="blank"
                                     className="button is-link">
                                     Github
                                 </a>
                                 <a
                                     href="https://www.linkedin.com/in/aylan-boscarino-a160b16b/"
+                                    target="blank"
                                     className="button is-link">
                                     LinkedIn
                                 </a>
                                 <a
                                     href="https://twitter.com/aylan_boscarino"
+                                    target="blank"
                                     className="button is-link">
                                     Twitter
                                 </a>
