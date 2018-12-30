@@ -15,12 +15,6 @@ export default function HomeScreen() {
                 <Navbar />
             </header>
             <div className="body">
-                {/* <Switch>
-                    <Route path="/" exact component={Home} />
-                    <Route path="/about" exact component={About} />
-                    <Route path="/services" exact component={Services} />
-                    <Route path="/portfolio" exact component={Portfolio} />
-                </Switch> */}
                 <Element name="home">
                     <Home />
                 </Element>
@@ -35,7 +29,9 @@ export default function HomeScreen() {
                 </Element>
             </div>
             <footer className="footer">
+                <Element name="comments">
                 <FooterScreen isLoged={false} />
+                </Element>
             </footer>
         </div>
     );

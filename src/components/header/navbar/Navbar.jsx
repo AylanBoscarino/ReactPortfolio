@@ -73,6 +73,16 @@ export default class Navbar extends Component {
                             </span>
                             <span>Portfolio</span>
                         </Link>
+
+                        <Link
+                            className="navbar-item"
+                            to="comments"
+                            smooth={true}>
+                            <span className="icon">
+                                <i className="fas fa-comments" />
+                            </span>
+                            <span>Comments</span>
+                        </Link>
                     </div>
                 </div>
             </nav>

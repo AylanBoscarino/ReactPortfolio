@@ -18,10 +18,13 @@ export class CommentWriter extends Component {
 
     onSubmit(e) {
         e.preventDefault();
+        const corpoComentario = this.state.corpoComentario;
+        const token = this.props.user.token;
         this.props.writeComment(
-            this.state.corpoComentario,
-            this.props.user.token
+            corpoComentario,
+            token
         );
+        this.setState({corpoComentario: ''});
     }
 
     onTextChange(e) {

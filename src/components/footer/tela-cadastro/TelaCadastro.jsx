@@ -63,7 +63,7 @@ export default class TelaCadastro extends Component {
             <form className="box" onSubmit={this.onSubmitHandle}>
                 <div className="field has-text-centered">
                     <h3 className="title">Sign Up</h3>
-                    <h3 className="subtitle">Join us and leave a comment</h3>
+                    <h3 className="subtitle">Join Us</h3>
                 </div>
                 <div className="field">
                     <label className="label">Email</label>
@@ -73,7 +73,6 @@ export default class TelaCadastro extends Component {
                             className="input"
                             placeholder="an email address"
                             value={this.state.email}
-                            // value={this.props.valorTeste}
                             onChange={this.onEmailChange}
                         />
                         <span className="icon is-small is-left">

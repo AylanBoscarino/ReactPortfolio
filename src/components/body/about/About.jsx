@@ -33,8 +33,8 @@ export default function About() {
                             <div className="content">
                                 <table className="table-profile">
                                     <tr>
-                                        <th colspan="1" />
-                                        <th colspan="2" />
+                                        <th colSpan="1" />
+                                        <th colSpan="2" />
                                     </tr>
                                     <tr>
                                         <td>Address:</td>

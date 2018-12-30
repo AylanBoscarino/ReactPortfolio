@@ -1,6 +1,6 @@
 export function validarInputs(name, email, password, passwordConfirmation) {
     const emailRegEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    const passwordRegEx = /(?=.*[A-Za-z])(?=.*\d).{8,10}$/;
+    // const passwordRegEx = /(?=.*[A-Za-z])(?=.*\d).{4,10}$/;
     const resultado = {
         valido: true,
         mensagem: ''
@@ -18,8 +18,8 @@ export function validarInputs(name, email, password, passwordConfirmation) {
         return resultado;
     }
 
-    if (!passwordRegEx.test(password)) {
-        resultado.mensagem = 'a senha precisa conter oito caracteres com letras e números'
+    if (password.length < 3) {
+        resultado.mensagem = 'a senha precisa ter 3 ou mais caracteres'
         resultado.valido = false;
         return resultado;
     }
