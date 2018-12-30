@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import 'bulma';
 
-import { fetchComments } from '../../actions/comments';
+import { fetchComments } from '../../../actions/comments';
 import Comment from '../comment/Comment';
 import CommentWriter from '../comment-writer/CommentWriter'
 

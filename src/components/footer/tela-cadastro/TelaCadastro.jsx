@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { validarInputs } from '../../service/formValidation';
+import { validarInputs } from '../../../service/formValidation';
 
 export default class TelaCadastro extends Component {
     constructor(props) {
