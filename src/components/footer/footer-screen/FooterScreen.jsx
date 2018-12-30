@@ -12,19 +12,19 @@ export class FooterScreen extends Component {
   }
 
   render() {
-    const isLoged = this.props.isLoged;
+    const isLoged = this.props.user.token && true;
     return (
       <div>
         <CommentList />
           <br />
-        {isLoged ? <CommentWriter />: <FormAuth />}
+        {isLoged ? <CommentWriter userName={this.props.user.nome} />: <FormAuth />}
       </div>
     )
   }
 }
 
 const mapStateToProps = (state) => ({
-  ...state.usuario
+  ...state.auth
 })
 
 const mapDispatchToProps = {

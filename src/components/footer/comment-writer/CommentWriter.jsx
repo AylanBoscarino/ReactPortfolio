@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import './style.css'
 
 export class CommentWriter extends Component {
-    // static propTypes = {
-    //     prop: PropTypes
-    // };
-
     render() {
         return (
             <article className="media">
@@ -17,6 +12,11 @@ export class CommentWriter extends Component {
                     </p>
                 </figure>
                 <div className="media-content">
+                    <p>
+                        <strong>
+                            {this.props.userName}
+                        </strong>
+                    </p>
                     <div className="field">
                         <p className="control">
                             <textarea

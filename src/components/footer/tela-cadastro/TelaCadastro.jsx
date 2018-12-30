@@ -44,16 +44,17 @@ export default class TelaCadastro extends Component {
     }
     onSubmitHandle(e) {
         e.preventDefault();
+        const { name, email, password, passwordConfirmation } = this.state;
         const resultado = validarInputs(
-            this.state.name,
-            this.state.email,
-            this.state.password,
-            this.state.passwordConfirmation
+            name,
+            email,
+            password,
+            passwordConfirmation
         );
         if (!resultado.valido) {
             return alert(resultado.mensagem);
         } else {
-            return alert('vai disparar uma action');
+            this.props.onSignup({ email, name, password });
         }
     }
 
@@ -72,6 +73,7 @@ export default class TelaCadastro extends Component {
                             className="input"
                             placeholder="an email address"
                             value={this.state.email}
+                            // value={this.props.valorTeste}
                             onChange={this.onEmailChange}
                         />
                         <span className="icon is-small is-left">
