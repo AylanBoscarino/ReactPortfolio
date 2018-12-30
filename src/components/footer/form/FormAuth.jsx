@@ -35,14 +35,11 @@ export class FormAuth extends Component {
     }
 
     render() {
-        console.log(this.props);
         return (
             <section className="is-primary is-fullheight columns">
                 <div className="container column is-two-thirds">
                     <div className="columns is-5-tablet is-4-desktop is-3-widescreen">
                         <div className="column">
-                            <p className="title">Token :{this.props.user.token}</p>
-
                             <label className="label">Alredy a friend?</label>
                             <label className="switch">
                                 <input

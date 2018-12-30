@@ -15,11 +15,7 @@ export const fetchComments = () => dispatch => {
 
 
 export const writeComment = (corpo, token) => dispatch => {
-    console.log({
-        corpo, token
-    })
     const url = 'http://morning-bayou-52363.herokuapp.com/api/comentarios';
-    // const url = 'http://localhost:3004/api/comentarios';
     return fetch(url, {
         method: 'POST',
         headers: new Headers({

@@ -11,7 +11,6 @@ export class CommentList extends Component {
     };
 
     render() {
-        console.log(this.props);
         const comments = this.props.comments.map(comment => (
             <Comment key={comment._id} comment={comment} />
         ));
