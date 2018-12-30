@@ -37,9 +37,9 @@ export class FormAuth extends Component {
     render() {
         return (
             <section className="is-primary is-fullheight columns">
-                <div className="container column is-two-thirds">
-                    <div className="columns is-5-tablet is-4-desktop is-3-widescreen">
-                        <div className="column">
+                <div className="container column  ">
+                    <div className="columns is-5-tablet is-4-desktop is-3-widescreen" >
+                        <div className="column is-two-thirds">
                             <label className="label">Alredy a friend?</label>
                             <label className="switch">
                                 <input

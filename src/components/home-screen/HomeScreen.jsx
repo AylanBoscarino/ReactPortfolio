@@ -1,12 +1,12 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Element } from 'react-scroll';
 
 import Navbar from '../header/navbar/Navbar';
 import Home from '../body/home/Home';
 import About from '../body/about/About';
 import Services from '../body/services/Services';
 import Portfolio from '../body/portfolio/Portfolio';
-import FooterScreen from '../footer/footer-screen/FooterScreen'
+import FooterScreen from '../footer/footer-screen/FooterScreen';
 
 export default function HomeScreen() {
     return (
@@ -15,15 +15,27 @@ export default function HomeScreen() {
                 <Navbar />
             </header>
             <div className="body">
-                <Switch>
+                {/* <Switch>
                     <Route path="/" exact component={Home} />
                     <Route path="/about" exact component={About} />
                     <Route path="/services" exact component={Services} />
                     <Route path="/portfolio" exact component={Portfolio} />
-                </Switch>
+                </Switch> */}
+                <Element name="home">
+                    <Home />
+                </Element>
+                <Element name="about">
+                    <About />
+                </Element>
+                <Element name="services">
+                    <Services />
+                </Element>
+                <Element name="portfolio">
+                    <Portfolio />
+                </Element>
             </div>
             <footer className="footer">
-                <FooterScreen isLoged={false}/>
+                <FooterScreen isLoged={false} />
             </footer>
         </div>
     );

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
+
 import 'bulma';
 
 import './Navbar.css';
@@ -37,9 +38,9 @@ export default class Navbar extends Component {
                 <div
                     id="navbarExampleTransparentExample"
                     className={`navbar-menu ${isActive}`}
-                    onClick={this.menuToggle} >
+                    onClick={this.menuToggle}>
                     <div className="navbar-start">
-                        <Link className="navbar-item" to="/">
+                        <Link className="navbar-item" to="home" smooth={true}>
                             <span className="icon">
                                 <i className="fas fa-home" />
                             </span>
@@ -47,26 +48,31 @@ export default class Navbar extends Component {
                         </Link>
                     </div>
                     <div className="navbar-end">
-                        <Link className="navbar-item" to="/about">
+                        <Link className="navbar-item" to="about" smooth={true}>
                             <span className="icon">
                                 <i className="fas fa-info" />
                             </span>
                             <span>About</span>
                         </Link>
-                        <Link className="navbar-item" to="/services">
+                        <Link
+                            className="navbar-item"
+                            to="services"
+                            smooth={true}>
                             <span className="icon">
                                 <i className="fas fa-bars" />
                             </span>
                             <span>Services</span>
                         </Link>
 
-                        <Link className="navbar-item" to="/portfolio">
+                        <Link
+                            className="navbar-item"
+                            to="portfolio"
+                            smooth={true}>
                             <span className="icon">
                                 <i className="fas fa-th-list" />
                             </span>
                             <span>Portfolio</span>
                         </Link>
-                        
                     </div>
                 </div>
             </nav>
