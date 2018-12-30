@@ -8,12 +8,14 @@ export default function Comment(props) {
     const mes = dataCriacao.getMonth();
     const ano = dataCriacao.getFullYear()
     const dataComentario = `${dia}/${mes}/${ano}`
+
+    const avatarNumber = Math.floor((Math.random() * 100) + 1);
     return (
         <article className="media">
             <figure className="media-left">
                 <p className="image is-64x64" >
                     <img
-                        src="https://api.adorable.io/avatars/64"
+                        src={`https://api.adorable.io/avatars/${avatarNumber}`}
                         alt="você"
                     />
                 </p>

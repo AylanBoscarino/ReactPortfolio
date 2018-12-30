@@ -23,10 +23,11 @@ export const signup = (nome, email, senha) => dispatch => {
 function fetchPostAuth(url, body, dispatch, type) {
     return fetch(url, {
         method: 'POST',
-        body,
         headers: new Headers({
             'Content-Type': 'application/json'
-        })
+        }),
+        body
+        
     })
     .then(response => {
         if(response.status === 401) throw new Error('Usuário ou senha inválidos')

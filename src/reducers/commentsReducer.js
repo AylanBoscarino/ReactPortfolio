@@ -1,4 +1,4 @@
-import { FETCH_COMMENTS } from '../actions/types';
+import { FETCH_COMMENTS, WRITE_COMMENT } from '../actions/types';
 
 const initialState = {
     comments: []
@@ -7,8 +7,15 @@ const initialState = {
 export default (state = initialState, { type, payload }) => {
     switch (type) {
         case FETCH_COMMENTS:
-            return { ...state, comments: payload };
-
+            return {
+                ...state,
+                comments: payload
+            };
+        case WRITE_COMMENT:
+            return {
+                ...state,
+                comments: [...state.comments, payload]
+            };
         default:
             return state;
     }
