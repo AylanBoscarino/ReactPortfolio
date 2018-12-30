@@ -19,7 +19,7 @@ export class CommentList extends Component {
             <div>
                 {comments}
                 <br/>
-                <CommentWriter />
+                {/* <CommentWriter /> */}
             </div>
         )
     }

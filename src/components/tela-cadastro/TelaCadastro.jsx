@@ -49,105 +49,87 @@ export default class TelaCadastro extends Component {
             this.state.email,
             this.state.password,
             this.state.passwordConfirmation
-        )
+        );
         if (!resultado.valido) {
             return alert(resultado.mensagem);
         } else {
-            return alert('vai disparar uma action')
+            return alert('vai disparar uma action');
         }
     }
 
     render() {
         return (
-            <section className="is-primary is-fullheight columns">
-                <div className="container column is-two-thirds">
-                    <div className="columns is-5-tablet is-4-desktop is-3-widescreen">
-                        <div className="column">
-                            <form className="box" onSubmit={this.onSubmitHandle}>
-                                <div className="field has-text-centered">
-                                    <h3 className="title">Sign Up</h3>
-                                    <h3 className="subtitle">
-                                        Join us and leave a comment
-                                    </h3>
-                                </div>
-                                <div className="field">
-                                    <label className="label">Email</label>
-                                    <div className="control has-icons-left">
-                                        <input
-                                            type="email"
-                                            className="input"
-                                            placeholder="an email address"
-                                            value={this.state.email}
-                                            onChange={this.onEmailChange}
-                                        />
-                                        <span className="icon is-small is-left">
-                                            <i className="fa fa-envelope" />
-                                        </span>
-                                    </div>
-                                </div>
-                                <div className="field">
-                                    <label className="label">Name</label>
-                                    <div className="control has-icons-left">
-                                        <input
-                                            type="name"
-                                            className="input"
-                                            placeholder="your name"
-                                            value={this.state.name}
-                                            onChange={this.onNameChange}
-                                        />
-                                        <span className="icon is-small is-left">
-                                            <i className="fa fa-envelope" />
-                                        </span>
-                                    </div>
-                                </div>
-                                <div className="field">
-                                    <label className="label">Password</label>
-                                    <div className="control has-icons-left">
-                                        <input
-                                            type="password"
-                                            className="input"
-                                            placeholder="*********"
-                                            required
-                                            value={this.state.password}
-                                            onChange={this.onPasswordChange}
-                                        />
-                                        <span className="icon is-small is-left">
-                                            <i className="fa fa-lock" />
-                                        </span>
-                                    </div>
-                                </div>
-                                <div className="field">
-                                    <label className="label">
-                                        Repeat Password
-                                    </label>
-                                    <div className="control has-icons-left">
-                                        <input
-                                            type="password"
-                                            className="input"
-                                            placeholder="*********"
-                                            required
-                                            value={
-                                                this.state.passwordConfirmation
-                                            }
-                                            onChange={this.onConfirmationChange}
-                                        />
-                                        <span className="icon is-small is-left">
-                                            <i className="fa fa-lock" />
-                                        </span>
-                                    </div>
-                                </div>
-                                <div className="field">
-                                    <button
-                                        className="button is-success"
-                                        >
-                                        sign up
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
+            <form className="box" onSubmit={this.onSubmitHandle}>
+                <div className="field has-text-centered">
+                    <h3 className="title">Sign Up</h3>
+                    <h3 className="subtitle">Join us and leave a comment</h3>
+                </div>
+                <div className="field">
+                    <label className="label">Email</label>
+                    <div className="control has-icons-left">
+                        <input
+                            type="email"
+                            className="input"
+                            placeholder="an email address"
+                            value={this.state.email}
+                            onChange={this.onEmailChange}
+                        />
+                        <span className="icon is-small is-left">
+                            <i className="fa fa-envelope" />
+                        </span>
                     </div>
                 </div>
-            </section>
+                <div className="field">
+                    <label className="label">Name</label>
+                    <div className="control has-icons-left">
+                        <input
+                            type="name"
+                            className="input"
+                            placeholder="your name"
+                            value={this.state.name}
+                            onChange={this.onNameChange}
+                        />
+                        <span className="icon is-small is-left">
+                            <i className="fa fa-envelope" />
+                        </span>
+                    </div>
+                </div>
+                <div className="field">
+                    <label className="label">Password</label>
+                    <div className="control has-icons-left">
+                        <input
+                            type="password"
+                            className="input"
+                            placeholder="*********"
+                            required
+                            value={this.state.password}
+                            onChange={this.onPasswordChange}
+                        />
+                        <span className="icon is-small is-left">
+                            <i className="fa fa-lock" />
+                        </span>
+                    </div>
+                </div>
+                <div className="field">
+                    <label className="label">Repeat Password</label>
+                    <div className="control has-icons-left">
+                        <input
+                            type="password"
+                            className="input"
+                            placeholder="*********"
+                            required
+                            value={this.state.passwordConfirmation}
+                            onChange={this.onConfirmationChange}
+                        />
+                        <span className="icon is-small is-left">
+                            <i className="fa fa-lock" />
+                        </span>
+                    </div>
+                </div>
+                <div className="field">
+                    <button className="button is-success">sign up</button>
+                </div>
+            </form>
         );
     }
 }

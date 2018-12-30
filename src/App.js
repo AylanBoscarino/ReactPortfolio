@@ -9,7 +9,7 @@ import About from './components/about/About';
 import Services from './components/services/Services';
 import Portfolio from './components/portfolio/Portfolio';
 import CommentList from './components/comment-list/CommentList';
-import TelaCadastro from './components/tela-cadastro/TelaCadastro';
+import FormAuth from './components/form/FormAuth'
 
 class App extends Component {
     render() {
@@ -30,7 +30,7 @@ class App extends Component {
                 <footer className="footer">
                     <CommentList />
                     <br />
-                    <TelaCadastro />
+                    <FormAuth></FormAuth>
                 </footer>
             </div>
         );
