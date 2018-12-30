@@ -57,19 +57,12 @@ export class CommentWriter extends Component {
                             <div className="level-item">
                                 <a
                                     className="button is-info"
+                                    href="/"
                                     onClick={this.onSubmit}>
                                     Submit
                                 </a>
                             </div>
                         </div>
-                        {/* <div className="level-right">
-                            <div className="level-item">
-                                <label className="checkbox">
-                                    <input type="checkbox" /> Press enter to
-                                    submit
-                                </label>
-                            </div>
-                        </div> */}
                     </nav>
                 </div>
             </article>
