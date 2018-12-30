@@ -6,7 +6,7 @@ export const login = (email, senha) => dispatch => {
         email, 
         senha
     });
-    const url = 'http://morning-bayou-52363.herokuapp.com/api/usuarios/login';
+    const url = 'https://morning-bayou-52363.herokuapp.com/api/usuarios/login';
 
     return fetchPostAuth(url, body, dispatch, LOGIN);
 }
@@ -15,7 +15,7 @@ export const signup = (nome, email, senha) => dispatch => {
     const body = JSON.stringify({
         nome, email, senha
     });
-    const url = 'http://morning-bayou-52363.herokuapp.com/api/usuarios';
+    const url = 'https://morning-bayou-52363.herokuapp.com/api/usuarios';
     
     return fetchPostAuth(url, body, dispatch, SIGNUP)
 }
