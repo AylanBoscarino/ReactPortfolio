@@ -83,7 +83,7 @@ export default function About() {
                         <div className="card-image">
                             <figure className="image is-3by3">
                                 <img
-                                    src="https://scontent-gig2-1.xx.fbcdn.net/v/t1.0-9/48425432_1924130327636296_7774356143991685120_n.jpg?_nc_cat=101&_nc_ht=scontent-gig2-1.xx&oh=54de001d8c04950d0b2e575e4af25e36&oe=5C8B7C4D"
+                                    src="https://i.ibb.co/dBxz4fM/myself.jpg"
                                     alt="Placeholder"
                                 />
                             </figure>
