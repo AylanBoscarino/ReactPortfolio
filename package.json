@@ -13,13 +13,16 @@
         "react-scripts": "2.1.1",
         "react-scroll": "^1.7.10",
         "redux": "^4.0.1",
-        "redux-thunk": "^2.3.0"
+        "redux-thunk": "^2.3.0",
+        "serve": "^9.4.0"
     },
     "scripts": {
-        "start": "react-scripts start",
+        "dev": "react-scripts start",
+        "start": "server -s build",
         "build": "react-scripts build",
         "test": "react-scripts test",
-        "eject": "react-scripts eject"
+        "eject": "react-scripts eject",
+        "heroku-postbuild": "yarn build"
     },
     "eslintConfig": {
         "extends": "react-app"
