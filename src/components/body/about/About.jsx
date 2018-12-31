@@ -1,3 +1,4 @@
+/* eslint-disable no-script-url */
 import React from 'react';
 import 'bulma';
 export default function About() {
@@ -32,6 +33,7 @@ export default function About() {
 
                             <div className="content">
                                 <table className="table-profile">
+                                    <tbody>
                                     <tr>
                                         <th colSpan="1" />
                                         <th colSpan="2" />
@@ -48,6 +50,7 @@ export default function About() {
                                         <td>Email:</td>
                                         <td>aylandesousa@gmail.com</td>
                                     </tr>
+                                    </tbody>
                                 </table>
                             </div>
                             <br />
@@ -96,7 +99,7 @@ export default function About() {
                                     <div className="media-content">
                                         <div className="content">
                                             <p>
-                                                <strong>JavaScript:</strong>
+                                                <strong>Javascript:</strong>
                                                 <br />
                                                 <progress
                                                     className="progress is-primary"

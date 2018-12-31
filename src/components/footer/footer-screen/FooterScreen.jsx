@@ -24,7 +24,7 @@ export class FooterScreen extends Component {
                 <br/>
                 <br/>
                 <div className="container">
-                    <p><CommentList /></p>
+                    <CommentList />
                 </div>
                 <br />
                 <br/>

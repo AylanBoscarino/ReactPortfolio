@@ -24,7 +24,7 @@ export default function Services() {
                     </div>
                     <div className="column">
                         <div className="box">
-                            <div classNameName="content">
+                            <div className="content">
                                 <h4 className="title is-5">
                                     Back End Web Development
                                 </h4>
