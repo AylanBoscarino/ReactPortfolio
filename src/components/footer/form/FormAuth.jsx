@@ -40,7 +40,7 @@ export class FormAuth extends Component {
                 <div className="container column  ">
                     <div className="columns is-5-tablet is-4-desktop is-3-widescreen" >
                         <div className="column is-two-thirds">
-                            <label className="label">Alredy a friend?</label>
+                            <label className="label">Already a friend?</label>
                             <label className="switch">
                                 <input
                                     type="checkbox"
