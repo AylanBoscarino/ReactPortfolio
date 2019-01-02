@@ -1,6 +1,7 @@
 /* eslint-disable no-script-url */
 import React from 'react';
 import 'bulma';
+import './style.css';
 export default function About() {
     return (
         <section className="section" id="about">
@@ -32,6 +33,7 @@ export default function About() {
                             <h3 className="title is-4">Profile</h3>
 
                             <div className="content">
+                                <div className="profile-table">
                                 <table className="table-profile">
                                     <tbody>
                                     <tr>
@@ -52,6 +54,7 @@ export default function About() {
                                     </tr>
                                     </tbody>
                                 </table>
+                                </div>
                             </div>
                             <br />
                             <div className="buttons has-addons is-centered">

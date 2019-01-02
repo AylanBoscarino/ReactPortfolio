@@ -1,4 +1,6 @@
 import React from 'react';
+import './style.css';
+import services from './data';
 
 export default function Services() {
     return (
@@ -10,59 +12,18 @@ export default function Services() {
             <br />
             <div className="container">
                 <div className="columns">
-                    <div className="column">
+                    {services.map((service, index) => (
+                        <div className="column" key={index}>
                         <div className="box">
                             <div className="content">
                                 <h4 className="title is-5">
-                                    Front End Web Development
+                                    {service.title}
                                 </h4>
-                                Develop Front End using latest standards with
-                                HTML5/CSS3 with added funtionality using
-                                JavaScript and React.js with Redux.
+                                {service.description}
                             </div>
                         </div>
                     </div>
-                    <div className="column">
-                        <div className="box">
-                            <div className="content">
-                                <h4 className="title is-5">
-                                    Back End Web Development
-                                </h4>
-                                Develop Back End application/service using
-                                Node.js or PHP Laravel and MySQL or Mongo DB
-                                databases.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="columns">
-                    <div className="column">
-                        <div className="box">
-                            <div className="content">
-                                <h4 className="title is-5">
-                                    Mobile Development
-                                </h4>
-                                Develop mobile native applications using the
-                                React Native framework as well with some support
-                                libraries like Redux.
-                            </div>
-                        </div>
-                    </div>
-                    <div className="column">
-                        <div className="box">
-                            <div className="content">
-                                <h4 className="title is-5">
-                                    Software Management
-                                </h4>
-                                I have experience managing legacy PHP and
-                                Javascript applications ensuring that it
-                                continues working for as long as needed as well
-                                as creating new system to substitute a legacy
-                                one that is not optimal anymore.
-                            </div>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </section>
