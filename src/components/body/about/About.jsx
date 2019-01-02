@@ -29,31 +29,43 @@ export default function About() {
             <div className="columns has-same-height is-gapless">
                 <div className="column">
                     <div className="card">
+                        <div className="card-image">
+                            <figure className="image is-3by3">
+                                <img
+                                    src="https://i.ibb.co/dBxz4fM/myself.jpg"
+                                    alt="Placeholder"
+                                />
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div className="column">
+                    <div className="card">
                         <div className="card-content">
                             <h3 className="title is-4">Profile</h3>
 
                             <div className="content">
                                 <div className="profile-table">
-                                <table className="table-profile">
-                                    <tbody>
-                                    <tr>
-                                        <th colSpan="1" />
-                                        <th colSpan="2" />
-                                    </tr>
-                                    <tr>
-                                        <td>Address:</td>
-                                        <td>Rio de Janeiro</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Phone:</td>
-                                        <td>+55 21 99899-9599</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Email:</td>
-                                        <td>aylandesousa@gmail.com</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
+                                    <table className="table-profile">
+                                        <tbody>
+                                            <tr>
+                                                <th colSpan="1" />
+                                                <th colSpan="2" />
+                                            </tr>
+                                            <tr>
+                                                <td>Address:</td>
+                                                <td>Rio de Janeiro</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Phone:</td>
+                                                <td>+55 21 99899-9599</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Email:</td>
+                                                <td>aylandesousa@gmail.com</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                             <br />
@@ -81,18 +93,7 @@ export default function About() {
                         </div>
                     </div>
                 </div>
-                <div className="column">
-                    <div className="card">
-                        <div className="card-image">
-                            <figure className="image is-3by3">
-                                <img
-                                    src="https://i.ibb.co/dBxz4fM/myself.jpg"
-                                    alt="Placeholder"
-                                />
-                            </figure>
-                        </div>
-                    </div>
-                </div>
+
                 <div className="column">
                     <div className="card">
                         <div className="card-content skills-content">
