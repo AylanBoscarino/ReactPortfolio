@@ -11,18 +11,18 @@ export default function Services() {
             </div>
             <br />
             <div className="container">
-                <div className="columns">
+                <div className="columns is-multiline">
                     {services.map((service, index) => (
-                        <div className="column" key={index}>
-                        <div className="box">
-                            <div className="content">
-                                <h4 className="title is-5">
-                                    {service.title}
-                                </h4>
-                                {service.description}
+                        <div className="column is-half pull-left" key={index}>
+                            <div className="box">
+                                <div className="content">
+                                    <h4 className="title is-5">
+                                        {service.title}
+                                    </h4>
+                                    {service.description}
+                                </div>
                             </div>
                         </div>
-                    </div>
                     ))}
                 </div>
             </div>

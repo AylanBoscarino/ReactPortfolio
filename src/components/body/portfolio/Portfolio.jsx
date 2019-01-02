@@ -15,46 +15,46 @@ export default function Portfolio() {
                 <div className="container portfolio-container">
                     <div className="columns">
                         {works.map(work => (
-                            
-                        <div className="column is-4">
-                            <div className="card">
-                                <header className="card-header">
-                                    <p className="card-header-title">
-                                        <span>{work.title}</span>
-                                        <span className="is-pulled-right">
-                                            {work.tags.map(tag => (
-                                            <span className="tag is-default">
-                                                {tag}
-                                            </span>    
-                                            ))}
-                                        </span>
-                                    </p>
-                                </header>
-                                <div className="card-content">
-                                    <figure className="image">
-                                        <img
-                                            src={work.imgSrc}
-                                            alt={work.imgDesc}
-                                        />
-                                    </figure>
+                            <div className="column is-4" key={work.contentLink}>
+                                <div className="card">
+                                    <header className="card-header">
+                                        <p className="card-header-title">
+                                            <span>{work.title}</span>
+                                            <span className="is-pulled-right">
+                                                {work.tags.map((tag, index) => (
+                                                    <span
+                                                        className="tag is-default"
+                                                        key={index}>
+                                                        {tag}
+                                                    </span>
+                                                ))}
+                                            </span>
+                                        </p>
+                                    </header>
+                                    <div className="card-content">
+                                        <figure className="image">
+                                            <img
+                                                src={work.imgSrc}
+                                                alt={work.imgDesc}
+                                            />
+                                        </figure>
+                                    </div>
+                                    <footer className="card-footer">
+                                        <a
+                                            href={work.contentLink}
+                                            target="blank"
+                                            className="card-footer-item">
+                                            {work.contentLabel}
+                                        </a>
+                                        <a
+                                            href={work.shareLink}
+                                            target="blank"
+                                            className="card-footer-item">
+                                            {work.shareLabel}
+                                        </a>
+                                    </footer>
                                 </div>
-                                <footer className="card-footer">
-                                    <a
-                                        href={work.contentLink}
-                                        target="blank"
-                                        className="card-footer-item">
-                                        {work.contentLabel}
-                                    </a>
-                                    <a
-                                        href={work.shareLink}
-                                        target="blank"
-                                        className="card-footer-item">
-                                        {work.shareLabel}
-                                    </a>
-                                </footer>
                             </div>
-                        </div>
-                        
                         ))}
                     </div>
                 </div>
