@@ -1,8 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import 'bulma';
-import works from './data';
 
 export default function Portfolio() {
+    const [works, setWorks] = useState([
+        {
+          title: '', 
+          tags: [''], 
+          imgSrc: '', 
+          imgDesc: '', 
+          contentLink: '', 
+          contentLabel: '', 
+          shareLink: '', 
+          shareLabel: ''
+        }
+      ]);
+
+    useEffect(() => {
+      fetch('https://morning-bayou-52363.herokuapp.com/api/jobs')
+          .then(response => response.json())
+          .then(jobs => setWorks(jobs) );
+    }, []);
+
     return (
         <section className="section" id="portfolio">
             <div className="container">
@@ -13,7 +31,7 @@ export default function Portfolio() {
                 <br />
 
                 <div className="container portfolio-container">
-                    <div className="columns">
+                    <div className="columns is-multiline ">
                         {works.map(work => (
                             <div className="column is-4" key={work.contentLink}>
                                 <div className="card">

@@ -6,7 +6,7 @@ import { fetchComments } from '../../../actions/comments';
 import Comment from '../comment/Comment';
 
 export class CommentList extends Component {
-    componentDidMount = () => {
+    componentDidMount () {
         this.props.fetchComments();
     };
 

@@ -14,11 +14,19 @@ export default class Navbar extends Component {
         };
 
         this.menuToggle = this.menuToggle.bind(this);
+        this.closeMenu = this.closeMenu.bind(this);
     }
     menuToggle() {
         this.setState(currentState => ({
             menuOpen: !currentState.menuOpen
         }));
+    }
+
+    closeMenu() {
+        console.log()
+        this.setState({
+            menuOpen:  false
+        });
     }
     render() {
         const isActive = this.state.menuOpen && 'is-active';
@@ -39,7 +47,7 @@ export default class Navbar extends Component {
                     id="navbarExampleTransparentExample"
                     className={`navbar-menu ${isActive}`}
                     onClick={this.menuToggle}>
-                    <div className="navbar-start">
+                    <div className="navbar-start" >
                         <Link className="navbar-item" to="home" smooth={true}>
                             <span className="icon">
                                 <i className="fas fa-home" />
@@ -47,7 +55,7 @@ export default class Navbar extends Component {
                             <span>Home</span>
                         </Link>
                     </div>
-                    <div className="navbar-end">
+                    <div className="navbar-end" >
                         <Link className="navbar-item" to="about" smooth={true}>
                             <span className="icon">
                                 <i className="fas fa-info" />

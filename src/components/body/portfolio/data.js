@@ -26,8 +26,17 @@ export default [
         imgDesc: 'Teste Unitário',
         contentLink: 'https://www.devmedia.com.br/teste-unitario/',
         contentLabel: 'Preview',
-        shareLink: 'https://www.devmedia.com.br/teste-unitario/',
+        shareLink: 'https://www.facebook.com/sharer/sharer.php?u=https://www.devmedia.com.br/teste-unitario/',
         shareLabel: 'Share on facebook'
-    }
-
+    },
+    {
+        title: 'Introduction to JWT',
+        tags: ['Course', 'Devmedia'],
+        imgSrc: 'https://www.devmedia.com.br/arquivos/serie/serie_jwt.png',
+        imgDesc: 'JSON Web Token',
+        contentLink: 'https://www.devmedia.com.br/jwt-json-web-tokens/',
+        contentLabel: 'Preview',
+        shareLink: 'https://www.facebook.com/sharer/sharer.php?u=https://www.devmedia.com.br/jwt-json-web-tokens/',
+        shareLabel: 'Share on facebook'
+    },
 ];

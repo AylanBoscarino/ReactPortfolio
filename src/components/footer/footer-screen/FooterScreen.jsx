@@ -1,10 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component, lazy, Suspense } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import CommentList from '../comment-list/CommentList';
+// import CommentList from '../comment-list/CommentList';
 import FormAuth from '../form/FormAuth';
 import CommentWriter from '../comment-writer/CommentWriter';
+import Loading from '../loading/Loading';
+
+const CommentList = lazy(() => import('../comment-list/CommentList'));
 
 export class FooterScreen extends Component {
     static propTypes = {
@@ -24,7 +27,9 @@ export class FooterScreen extends Component {
                 <br/>
                 <br/>
                 <div className="container">
+                <Suspense fallback={<div><Loading /></div>} >
                     <CommentList />
+                </Suspense>
                 </div>
                 <br />
                 <br/>
